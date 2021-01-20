@@ -1,3 +1,6 @@
+# Credits
+Thanks to https://github.com/inaciose/ebamk2_description for the starting point!
+
 # ebamk2_description
 ROs robotic arm description package for eezyBotArm MK2. Works with related.
 
