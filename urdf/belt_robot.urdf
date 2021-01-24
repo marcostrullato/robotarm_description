@@ -8,7 +8,7 @@
   <link name="base">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_base.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_base.stl"/>
       </geometry>
       <material name="blue"/>
     </visual>
@@ -17,7 +17,7 @@
   <link name="body">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_body.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_body.stl"/>
       </geometry>
       <material name="blue"/>
       <origin rpy="0 0 -1.6057"
@@ -35,7 +35,7 @@
   <link name="lower">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_lower.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_lower.stl"/>
       </geometry>
       <origin rpy="0 -0.76794 -1.6057" xyz="0 0 0"/>
       <material name="blue"/>
@@ -73,7 +73,7 @@
   <link name="upper">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_upper.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_upper.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="blue"/>
@@ -91,7 +91,7 @@
   <link name="manipulator">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_manipulator.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_manipulator.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="blue"/>
@@ -109,7 +109,7 @@
   <link name="gripper_left">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_gripper_left.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_gripper_left.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="blue"/>
@@ -119,7 +119,7 @@
   <link name="gripper_right">
     <visual>
       <geometry>
-        <mesh filename="package://belt_robot_description/urdf/meshes/belt_arm_ros_gripper_right.stl"/>
+        <mesh filename="package://robotarm_description/urdf/meshes/belt_arm_ros_gripper_right.stl"/>
       </geometry>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <material name="blue"/>
