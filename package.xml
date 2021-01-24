@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>ebamk2_description</name>
+  <name>robotarm_description</name>
   <version>0.0.0</version>
-  <description>The ebamk2_description package</description>
+  <description>The robotarm_description package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
   <!-- <maintainer email="jane.doe@example.com">Jane Doe</maintainer> -->
-  <maintainer email="inaciose@todo.todo">inaciose</maintainer>
+  <maintainer email="marco.strullato@gmail.com">Marco Strullato</maintainer>
 
 
   <!-- One license tag required, multiple allowed, one license per tag -->

@@ -22,13 +22,13 @@
         <node pkg="ntbd_core" type="path_planner" name="path_planner"/>
 
 	<!-- NTBD specific manipulator nodes -->
-        <node pkg="ebamk2_description" type="IK" name="IK" output="screen" />
-        <node pkg="ebamk2_description" type="motors_values" name="motors_values"/>
-        <node pkg="ebamk2_description" type="FK" name="FK"/>
-        <node pkg="ebamk2_description" type="physical_2_visual" name="physical_2_visual"/>
+        <node pkg="robotarm_description" type="IK" name="IK" output="screen" />
+        <node pkg="robotarm_description" type="motors_values" name="motors_values"/>
+        <node pkg="robotarm_description" type="FK" name="FK"/>
+        <node pkg="robotarm_description" type="physical_2_visual" name="physical_2_visual"/>
 
 	<!-- URDF Loading -->
-	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find ebamk2_description)/urdf/ebamk2_web.urdf"/>
+	<param name="robot_description" command="$(find xacro)/xacro --inorder $(find robotarm_description)/urdf/robotarm_web.urdf"/>
 
 	<!--Robot Publisher and  Rosbridge -->
         <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher"/>
