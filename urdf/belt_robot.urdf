@@ -1,145 +1,130 @@
 <?xml version="1.0"?>
 <robot name="robot">
-
-  <material name = "blue">
-    <color rgba="0 0 0.8 1"/>
-  </material>
-
-  <link name="base">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_base.stl"/>
-      </geometry>
-      <material name="blue"/>
-    </visual>
-  </link>
-
-  <link name="body">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_body.stl"/>
-      </geometry>
-      <material name="blue"/>
-      <origin rpy="0 0 -1.6057">
-    </visual>
-  </link>
-
-  <joint name="base_body" type="revolute">
-    <parent link="base"/>
-    <child link="body"/>
-    <limit effort="30.0" lower="0" upper="3.2114" velocity="0.5"/>
-    <axis xyz="0 0 1"/>
-    <origin xyz="0 0 0.056"/>
-  </joint>
-
-  <link name="lower">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_lower.stl"/>
-      </geometry>
-      <origin rpy="0 -0.76794 -1.6057" xyz="0 0 0"/>
-      <material name="blue"/>
-    </visual>
-  </link>
-
-  <joint name="body_lower" type="revolute">
-    <parent link="body"/>
-    <child link="lower"/>
-    <limit effort="30.0" lower="0" upper="2.33874" velocity="0.5"/>
-    <axis xyz="1 0 0"/>
-    <origin xyz="0 0 0.074"/>
-  </joint>
-
-  <link name="virtualupper">
-    <visual>
-      <geometry>
-        <cylinder length="0.001" radius="0.0001"/>
-      </geometry>
-      <material name="">
-        <color rgba="0 0 0 0" />
-      </material>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-    </visual>
-  </link>
-
-  <joint name="lower_virtualupper" type="continuous">
-    <parent link="lower"/>
-    <child link="virtualupper"/>
-    <axis xyz="1 0 0"/>
-    <origin xyz="0 0 0.12"/>
-    <mimic joint="body_lower" multiplier="-1" offset="0" />
-  </joint>
-
-  <link name="upper">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_upper.stl"/>
-      </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="blue"/>
-    </visual>
-  </link>
-
-  <joint name="virtualupper_upper" type="revolute">
-  	<parent link="virtualupper"/>
-  	<child link="upper"/>
-  	<limit effort="30" lower="-2.24741" upper="0.484" velocity="0.5"/>
-  	<axis xyz="1 0 0"/>
-  	<origin xyz="0 0 0"/>
-  </joint>
-
-  <link name="manipulator">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_manipulator.stl"/>
-      </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="blue"/>
-    </visual>
-  </link>
-
-   <joint name="upper_manipulator" type="continuous">
-  	<parent link="upper"/>
-  	<child link="manipulator"/>
-  	<axis xyz="1 0 0"/>
-  	<origin xyz="0 0.12 0"/>
-  	<mimic joint="virtualupper_upper" multiplier="-1" offset="0"/>
-  </joint>
-
-  <link name="gripper_left">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_gripper_left.stl"/>
-      </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="blue"/>
-    </visual>
-  </link>
-  
-  <link name="gripper_right">
-    <visual>
-      <geometry>
-        <mesh filename="package://robotarm_description/meshes/belt_arm_ros_gripper_right.stl"/>
-      </geometry>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-      <material name="blue"/>
-    </visual>
-  </link>
-
-  <joint name="manipulator_gripper" type="prismatic">
-  	<parent link="manipulator"/>
-  	<child link="gripper_left"/>
-  	<limit effort="30" lower="0" upper="0.015" velocity="0.5"/>
-  	<axis xyz="1 0 0"/>
-  	<origin xyz="0 0 0"/>
-  </joint>
-
-  <joint name="manipulator_gripper_mimic" type="prismatic">
-  	<parent link="manipulator"/>
-  	<child link="gripper_right"/>
-  	<limit effort="30" lower="-0.015" upper="0" velocity="0.5"/>
-  	<axis xyz="1 0 0"/>
-  	<origin xyz="0 0 0"/>
-  	<mimic joint="manipulator_gripper" multiplier="-1" offset="0" />
-  </joint>
+	<material name="blue">
+		<color rgba="0 0 0.8 1" />
+	</material>
+	<link name="base">
+		<visual>
+			<geometry>
+				<mesh filename="package://robotarm_description/meshes/belt_arm_ros_base.stl" />
+			</geometry>
+			<material name="blue" />
+		</visual>
+	</link>
+	<link name="body">
+		<visual>
+			<geometry>
+				<mesh filename="package://robotarm_description/meshes/belt_arm_ros_body.stl" />
+			</geometry>
+			<material name="blue" />
+			<origin rpy="0 0 -1.6057">
+			</origin>
+		</visual>
+		<joint name="base_body" type="revolute">
+			<parent link="base" />
+			<child link="body" />
+			<limit effort="30.0" lower="0" upper="3.2114" velocity="0.5" />
+			<axis xyz="0 0 1" />
+			<origin xyz="0 0 0.056" />
+		</joint>
+		<link name="lower">
+			<visual>
+				<geometry>
+					<mesh filename="package://robotarm_description/meshes/belt_arm_ros_lower.stl" />
+				</geometry>
+				<origin rpy="0 -0.76794 -1.6057" xyz="0 0 0" />
+				<material name="blue" />
+			</visual>
+		</link>
+		<joint name="body_lower" type="revolute">
+			<parent link="body" />
+			<child link="lower" />
+			<limit effort="30.0" lower="0" upper="2.33874" velocity="0.5" />
+			<axis xyz="1 0 0" />
+			<origin xyz="0 0 0.074" />
+		</joint>
+		<link name="virtualupper">
+			<visual>
+				<geometry>
+					<cylinder length="0.001" radius="0.0001" />
+				</geometry>
+				<material name="">
+					<color rgba="0 0 0 0" />
+				</material>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+			</visual>
+		</link>
+		<joint name="lower_virtualupper" type="continuous">
+			<parent link="lower" />
+			<child link="virtualupper" />
+			<axis xyz="1 0 0" />
+			<origin xyz="0 0 0.12" />
+			<mimic joint="body_lower" multiplier="-1" offset="0" />
+		</joint>
+		<link name="upper">
+			<visual>
+				<geometry>
+					<mesh filename="package://robotarm_description/meshes/belt_arm_ros_upper.stl" />
+				</geometry>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<material name="blue" />
+			</visual>
+		</link>
+		<joint name="virtualupper_upper" type="revolute">
+			<parent link="virtualupper" />
+			<child link="upper" />
+			<limit effort="30" lower="-2.24741" upper="0.484" velocity="0.5" />
+			<axis xyz="1 0 0" />
+			<origin xyz="0 0 0" />
+		</joint>
+		<link name="manipulator">
+			<visual>
+				<geometry>
+					<mesh filename="package://robotarm_description/meshes/belt_arm_ros_manipulator.stl" />
+				</geometry>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<material name="blue" />
+			</visual>
+		</link>
+		<joint name="upper_manipulator" type="continuous">
+			<parent link="upper" />
+			<child link="manipulator" />
+			<axis xyz="1 0 0" />
+			<origin xyz="0 0.12 0" />
+			<mimic joint="virtualupper_upper" multiplier="-1" offset="0" />
+		</joint>
+		<link name="gripper_left">
+			<visual>
+				<geometry>
+					<mesh filename="package://robotarm_description/meshes/belt_arm_ros_gripper_left.stl" />
+				</geometry>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<material name="blue" />
+			</visual>
+		</link>
+		<link name="gripper_right">
+			<visual>
+				<geometry>
+					<mesh filename="package://robotarm_description/meshes/belt_arm_ros_gripper_right.stl" />
+				</geometry>
+				<origin rpy="0 0 0" xyz="0 0 0" />
+				<material name="blue" />
+			</visual>
+		</link>
+		<joint name="manipulator_gripper" type="prismatic">
+			<parent link="manipulator" />
+			<child link="gripper_left" />
+			<limit effort="30" lower="0" upper="0.015" velocity="0.5" />
+			<axis xyz="1 0 0" />
+			<origin xyz="0 0 0" />
+		</joint>
+		<joint name="manipulator_gripper_mimic" type="prismatic">
+			<parent link="manipulator" />
+			<child link="gripper_right" />
+			<limit effort="30" lower="-0.015" upper="0" velocity="0.5" />
+			<axis xyz="1 0 0" />
+			<origin xyz="0 0 0" />
+			<mimic joint="manipulator_gripper" multiplier="-1" offset="0" />
+		</joint>
+	</link>
 </robot>
