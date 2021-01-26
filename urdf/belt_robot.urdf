@@ -20,7 +20,7 @@
         <mesh filename="package://robotarm_description/meshes/belt_arm_ros_body.stl"/>
       </geometry>
       <material name="blue"/>
-      <origin rpy="0 0 -1.6057"
+      <origin rpy="0 0 -1.6057">
     </visual>
   </link>
 
