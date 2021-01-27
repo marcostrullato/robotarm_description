@@ -16,7 +16,7 @@
 		<child link="body" />
 		<limit effort="30.0" lower="0" upper="3.2114" velocity="0.5" />
 		<axis xyz="0 0 1" />
-		<!-- <origin xyz="0 0 0.056" /> -->
+		<origin xyz="0 0 0.056" />
 	</joint>
 	<link name="body">
 		<visual>
