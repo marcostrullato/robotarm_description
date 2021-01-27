@@ -64,48 +64,17 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        base_link:
+        base:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        claw_base:
+        body:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        claw_l:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        claw_r:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        link_1:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        link_2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        link_2v:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        link_3:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        link_4:
-          Alpha: 1
+        Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
