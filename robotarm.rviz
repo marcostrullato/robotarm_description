@@ -74,6 +74,36 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        lower:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        virtualupper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        upper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        manipulator:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true           
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
