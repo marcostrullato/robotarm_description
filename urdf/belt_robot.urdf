@@ -24,8 +24,7 @@
 				<mesh filename="package://robotarm_description/meshes/belt_arm_ros_body.stl" />
 			</geometry>
 			<material name="blue" />
-			<origin rpy="0 0 -1.6057">
-			</origin>
+			<origin rpy="0 0 0"/>
 		</visual>
 	</link>
 	<link name="lower">
@@ -33,7 +32,7 @@
 			<geometry>
 				<mesh filename="package://robotarm_description/meshes/belt_arm_ros_lower.stl" />
 			</geometry>
-			<origin rpy="0 -0.76794 -1.6057" xyz="0 0 0" />
+			<<origin rpy="0 0 0" xyz="0 0 0" />
 			<material name="blue" />
 		</visual>
 	</link>
